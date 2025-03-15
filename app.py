@@ -5,8 +5,8 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 # โหลดข้อมูลและโมเดล
-df = pd.read_csv(r"D:\Intellligence\Component\Loan_Applications_Dataset.csv")
-model = load_model(r"D:\Intellligence\Component\loan_approval_model.h5")
+df = pd.read_csv(r"Loan_Applications_Dataset.csv")
+model = load_model(r"loan_approval_model.h5")
 
 # One-Hot Encoding สำหรับ loan_purpose (แก้ไข sparse เป็น sparse_output)
 encoder = OneHotEncoder(sparse_output=False, drop='first')
@@ -70,16 +70,16 @@ def show_explanation():
     ### ขั้นตอนการพัฒนาโมเดล
     - ออกแบบโครงสร้างโมเดลและฝึกโมเดลด้วยชุดข้อมูล.
     - ปรับ hyperparameters เพื่อให้ได้โมเดลที่ดีที่สุด""")
-    st.image("Component\PIC1.png", caption="นำไฟล์Datasetเข้ามาลงในColab และ อ่าน", use_container_width=True)
-    st.image("Component\PIC2.png", caption="ทำความสะอาดข้อมูลโดยการแก้ไขข้อผิดพลาดและแปลงค่าเป็น BINARY", use_container_width=True)
-    st.image("Component\PIC3.png", caption="แก้ไขค่าที่หายไป", use_container_width=True)
-    st.image("Component\PIC4.png", caption="แปลง categorical features เป็น numerical", use_container_width=True)
-    st.image("Component\PIC5.png", caption="เลือก features และ target", use_container_width=True)
-    st.image("Component\PIC6.png", caption="แบ่งข้อมูลเป็นชุดฝึกและชุดทดสอบ", use_container_width=True)
-    st.image("Component\PIC7.png", caption="ปรับขนาดข้อมูล", use_container_width=True)
-    st.image("Component\PIC8.png", caption="สร้างโมเดล", use_container_width=True)
-    st.image("Component\PIC9.png", caption="คอมไพล์โมเดล", use_container_width=True)
-    st.image("Component\PIC11.png", caption="ประเมินโมเดล", use_container_width=True)
+    st.image("PIC1.png", caption="นำไฟล์Datasetเข้ามาลงในColab และ อ่าน", use_container_width=True)
+    st.image("PIC2.png", caption="ทำความสะอาดข้อมูลโดยการแก้ไขข้อผิดพลาดและแปลงค่าเป็น BINARY", use_container_width=True)
+    st.image("PIC3.png", caption="แก้ไขค่าที่หายไป", use_container_width=True)
+    st.image("PIC4.png", caption="แปลง categorical features เป็น numerical", use_container_width=True)
+    st.image("PIC5.png", caption="เลือก features และ target", use_container_width=True)
+    st.image("PIC6.png", caption="แบ่งข้อมูลเป็นชุดฝึกและชุดทดสอบ", use_container_width=True)
+    st.image("PIC7.png", caption="ปรับขนาดข้อมูล", use_container_width=True)
+    st.image("PIC8.png", caption="สร้างโมเดล", use_container_width=True)
+    st.image("PIC9.png", caption="คอมไพล์โมเดล", use_container_width=True)
+    st.image("PIC11.png", caption="ประเมินโมเดล", use_container_width=True)
     
 
 # หน้าเว็บ 2: Demo การทำงานของโมเดล
