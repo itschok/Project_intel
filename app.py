@@ -143,12 +143,19 @@ def show_demo2():
 # กำหนดหน้าเว็บ
 pages = {
     "อธิบายแนวทางการพัฒนาโมเดล Neural Network": show_explanation,
-    "อธิบายแนวทางการพัฒนาโมเดล Machine Learning": show_explanation2,
     "Demo การทำงานของโมเดล Neural Network": show_demo,
-    "Demo การทำงานของโมเดล Machine Learning": show_demo2
+    "อธิบายแนวทางการพัฒนาโมเดล Machine Learning": show_explanation2,
+    "Demo การทำงานของโมเดล Machine Learning": show_demo2,
 }
 
 # สร้างเมนูแบบกด
-st.sidebar.title("เมนู")
-selected_page = st.sidebar.radio("เลือกหน้า", list(pages.keys()))
-pages[selected_page]()
+tab1, tab2 ,tab3 ,tab4= st.tabs(["อธิบายแนวทางการพัฒนาโมเดล NM", "Demo การทำงานของโมเดล NM","อธิบายแนวทางการพัฒนาโมเดล ML","Demo การทำงานของโมเดล ML"])
+
+with tab1:
+    show_explanation()
+with tab2:
+    show_demo()
+with tab3:
+    show_explanation2()
+with tab4:
+    show_demo2()    
